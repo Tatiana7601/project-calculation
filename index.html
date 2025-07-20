@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <title>Tax Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="utils.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="src/DB/db.js" defer></script>
+    <script src="src/utils/utils.js" defer></script>
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
 <header>
     <h1>Tax Calculator</h1>
 </header>
 <div class="container">
-    <div id="taxForm">
+    <div class="left-panel" id="taxForm">
         <label>Income:
             <input type="number" id="income" placeholder="999999999" required>
         </label>
         <label>Country:
-            <input type="text" id="country" placeholder="Please enter your country" required>
+            <select id="country">
+                <option value="Germany">Germany</option>
+                <option value="Belgium">Belgium</option>
+            </select>
         </label>
         <label>State:
-            <input type="text" id="state" placeholder="Please enter your State" required>
+            <select id="state">
+            </select>
         </label>
 
         <button id="taxButton">Click Me!</button>
     </div>
 
-    <div id="result-side">
+    <div class="right-panel" id="result-side">
         <h2 id="resultText">Result:</h2>
     </div>
 </div>
